@@ -9,9 +9,9 @@ struct stack
 typedef struct stack STACK;
 STACK s;
 
-void push();
-int  pop();
-void display();
+void push(void);
+int  pop(void);
+void display(void);
 
 void main ()
 {
@@ -45,9 +45,12 @@ void main ()
         case 4:
             return;
         }
+        fflush (stdin);
+        printf ("Do you want to continue(Type 0 or 1)?\n");
+        scanf    ("%d", &option);
     }
 }
-/*  Function to add an element to the stack */
+
 void push ()
 {
     int num;
